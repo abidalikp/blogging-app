@@ -2,11 +2,12 @@
 
 {% block content %}
 
-<h1>Welcome to my blog</h1>
-<h3>Top 10 Articles</h3>
-<ul>
-{% for article in latest_articles %}
-    <li><a href="{% url 'get_article' article.pk %}">{{ article }}</a></li>
-{% endfor %}
-</ul>
+<div class="container blue-grey white-text darken-3">
+    <h3 class="center-align">Articles</h3>
+    <ul class="collection center-align">
+        {% for article in latest_articles %}
+        <a href="{% url 'get_article' article.pk %}"><li class="collection-item black-text">{{ article }}</li></a>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

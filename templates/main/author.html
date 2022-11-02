@@ -1,9 +1,12 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
-    <h1>{{ author }}</h1>
-    <h3>Articles</h3>
-    {% for article in author.article_set.all %}
-        <li><a href="{% url 'get_article' article.pk %}">{{ article }}</a></li>
-    {% endfor %}
+<div class="container blue-grey white-text">
+    <h3 class="center-align">{{ author }}</h3>
+    <ul class="collection center-align">
+        {% for article in author.article_set.all %}
+        <a href="{% url 'get_article' article.pk %}"><li class="collection-item black-text">{{ article }}</li></a>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}
