@@ -12,6 +12,13 @@ def index(request):
     }
     return render(request, 'main/index.html', context)
 
+def authors(request):
+    authors = models.Author.objects.all()
+    context = {
+        'authors': authors
+    }
+    return render(request, 'main/authors.html', context)
+
 def article(request, pk):
     article = get_object_or_404(models.Article, pk=pk)
     context = {

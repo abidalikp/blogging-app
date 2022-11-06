@@ -1,19 +1,21 @@
 {% extends 'main/base.html' %}
 
 {% block content %}
+
 <div class="container blue-grey white-text darken-3">
-    <h3 class="center-align">{{ author }}</h3>
+    <h3 class="center-align">Authors</h3>
     <div class="divider"></div>
     <div class="row">
         <ul class="collection center-align">
-            {% for article in author.article_set.all %}
+            {% for author in authors %}
             <li class="collection-item blue-grey darken-2">
-                <a class="white-text" href="{% url 'get_article' article.pk %}">
-                    {{ article }}
+                <a class="white-text" href="{% url 'get_author' author.pk %}">
+                    {{ author }}
                 </a>
             </li>
             {% endfor %}
         </ul>
     </div>
 </div>
+
 {% endblock %}

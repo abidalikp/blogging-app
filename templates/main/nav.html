@@ -3,7 +3,10 @@
         <div class="container">
             <a href="{% url 'index' %}" class="brand-logo center">My Blog</a>
             <ul id="nav-mobile" class="right hide-on-med-and-down">
-                <li><a href="">Authors</a></li>
+                <li><a href="{% url 'create_article' %}">Create</a></li>
+            </ul>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+                <li><a href="{% url 'authors' %}">Authors</a></li>
             </ul>
         </div>
     </div>

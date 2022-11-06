@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="{% static 'css/materialize.min.css' %}">
     <script src="{% static 'js/materialize.min.js' %}"></script>
 </head>
-<body class="blue-grey">
+<body>
     {% include 'main/nav.html' %}
     {% block content %} {% endblock %}
+    {% block script %} {% endblock %}
 </body>
 </html>
